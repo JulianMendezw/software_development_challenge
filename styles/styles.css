@@ -1,0 +1,202 @@
+body {
+	background: url("/images/room.gif") no-repeat fixed;
+}
+
+/* logo section */
+#logo-container{
+	display: grid;
+	place-items: center;
+}
+#logo{
+	width: 250px;
+	margin-top: 5%;
+}
+
+/* search bar */
+.container-search{
+	display: grid;
+	place-items: center;
+	margin-top: 50px;
+}
+
+#search-bar {
+	font-family: "Poppins";
+    height: 46px;
+    border-radius: 48px;
+    border: 0.5px solid lightgrey;
+    width: 40%;
+    padding-right: 40px;
+    padding-left: 10px;
+}
+
+/* remove the border of the text field */
+input[type="text"]:focus {
+	outline: none;
+	border: none;
+ }
+
+/* text recommendations section */
+#recommendations-container {
+	display: flex;
+	align-items: center;
+	margin-top: 8%;
+}
+
+#text-recommendations {
+	background: rgb(0, 204, 255);
+	font-family: "Poppins";
+	font-weight: bold;
+	font-size: 12px;
+    height: 46px;
+    border-radius: 0 20px 20px 0;
+    width: 200px;
+	position: absolute;
+	padding-top: 4px;
+	padding-left: 40px;
+	margin-bottom: 340px;
+	z-index: 3;
+}
+
+/* slider styling */
+.slider {
+	height: 350px;
+	position: relative;
+	width: 100%;
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+}
+
+/* animation slide */
+.slide-track {
+	display: flex;
+	width: calc(250px * 50);
+	animation: scroll 120s linear infinite;
+}
+
+.slide-track:hover{
+	animation-play-state: paused;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100%{
+		transform: translateX(calc(-250px * 25));
+	}
+}
+
+.slide {
+	height: 340px;
+	width: 250px;
+	display: flex;
+	align-items: stretch;
+	justify-content: space-around;
+	padding: 5px;
+	perspective: 400px;
+}
+
+img:hover {
+	transform: translateZ(20px);
+}
+
+/* gradient shadows */
+.slider::before, .slider::after {
+	background-image: linear-gradient(to right,rgb(0, 0, 0) 0%, rgba(255, 255,255,0) 100%);
+	content: '';
+	height: 100%;
+	position: absolute;
+	width: 15%;
+	z-index: 2;
+}
+
+.slider::before{
+	left: 0;
+	top: 0;
+}
+
+.slider::after{
+	right: 0%;
+	top: 0%;
+	transform: rotateZ(180deg);
+}
+
+/* anime picture styling */
+.anime-picture {
+	height: 100%;
+	object-fit: cover;
+    object-position: 100%;
+	border-radius: 20px;
+	transition: transform 2s;
+}
+
+/* search result section */
+.card-container {
+	display: flex;
+}
+
+.grid {
+	padding-top: 20px;
+	margin: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	grid-template-columns: repeat (3, 1fr);
+	grid-gap: 20px;
+}
+
+.grid > article {
+	background: rgba(80, 80, 80, 0.719);
+	border: none;
+	box-shadow: 2px 2px 6px 0px rgb(0,0,0,0.3);
+	border-radius: 20px;
+	text-align: center;
+	width: 250px;
+	transition: transform .3s;
+}
+
+#picture {
+	height: 250px;
+	margin-top: 10px;
+	border-radius: 20px;
+}
+
+#title-text {
+	padding: 1px 12px 0px;
+	font-family: "Poppins";
+	color: whitesmoke;
+	font-size: 14px;
+}
+
+#synopsis-text {
+	display: grid;
+	font-family: "Poppins";
+	color: whitesmoke;
+	font-size: 12px;
+	padding: 1px 12px 0px;
+	text-align: justify;
+}
+
+#score-container{
+	margin-top: 5px;
+}
+
+#score-text-1{
+	background: rgb(255, 44, 44);
+	font-family: "Poppins";
+	font-size: 12px;
+	font-weight: bold;
+}
+#score-text-2{
+	background: rgb(0, 204, 255);
+	font-family: "Poppins";
+	font-size: 12px;
+	font-weight: bold;
+}
+#score-text-3{
+	background: rgb(69, 255, 44);
+	font-family: "Poppins";
+	font-size: 12px;
+	font-weight: bold;
+}
