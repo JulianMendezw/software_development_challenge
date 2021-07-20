@@ -14,3 +14,8 @@ Jikan (時間) is an open-source PHP & REST API for the **_“most active online
 <br><br>
 
 ![](https://github.com/JulianMendezw/software_development_challenge/blob/master/images/screenshots/Screenshot-2.jpg?raw=true)
+
+Take a look:
+
+You can use the bestanime at:
+https://software-development-challenge.herokuapp.com/
